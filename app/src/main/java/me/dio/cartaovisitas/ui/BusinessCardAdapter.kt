@@ -12,6 +12,8 @@ import me.dio.cartaovisitas.databinding.ItemBusinessCardBinding
 
 class BusinessCardAdapter: ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()) {
     var listenerShare: (View) -> Unit = {}
+    var listenerDelete: (BusinessCard) -> Unit = {}
+    var listenerUpdate: (BusinessCard) -> Unit = {}
 
     inner class ViewHolder (
         private val binding: ItemBusinessCardBinding
@@ -24,6 +26,12 @@ class BusinessCardAdapter: ListAdapter<BusinessCard, BusinessCardAdapter.ViewHol
             binding.mcvContent.setCardBackgroundColor(Color.parseColor(item.fundoPersonalizado))
             binding.mcvContent.setOnClickListener {
                 listenerShare(it)
+            }
+            binding.btnDelete.setOnClickListener {
+                listenerDelete(item)
+            }
+            binding.btnEdit.setOnClickListener {
+                listenerUpdate(item)
             }
         }
     }

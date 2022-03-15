@@ -10,4 +10,9 @@
     <string name="btn_confirmar">Confirmar</string>
     <string name="label_show_success">Cartão Cadastrado com Sucesso!</string>
     <string name="label_share">Compartilhar</string>
+    <string name="confirm_dialog_delete_card">Exclusão de Cartão</string>
+    <string name="confirm_delete">Sim</string>
+    <string name="cancel_delete">Não</string>
+    <string name="color_ok">OK</string>
+    <string name="color_cancel">Cancela</string>
 </resources>
